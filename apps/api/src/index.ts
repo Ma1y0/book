@@ -4,13 +4,17 @@ import { logger } from "hono/logger";
 import { appRouter } from "./routes";
 import { cors } from "hono/cors";
 import { createContext } from "~/lib/context";
+import { env } from "hono/adapter";
 
 const app = new Hono();
 
 app.use(logger());
 app.use(
   "/*",
-  cors({ origin: process.env.CORS_ORIGIN || "", credentials: true }),
+  cors({
+    origin: (_, c) => env<{ CORS_ORIGIN: string }>(c).CORS_ORIGIN,
+    credentials: true,
+  }),
 );
 
 app.get("/ping", (c) => {

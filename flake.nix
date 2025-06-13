@@ -12,7 +12,6 @@
     {
       devShell.${system} = pkgs.mkShell {
         packages = with pkgs; [
-	  pnpm
 	  nodejs_24
 	  bun
 	  typescript-language-server
@@ -20,6 +19,7 @@
 	  # eslint_d
 	  # prettierd
 	  biome
+	  wrangler
         ];
         shellHook = ''
           exec zsh

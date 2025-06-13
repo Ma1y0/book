@@ -1,0 +1,9 @@
+name = "book-web"
+compatibility_date = "2025-06-13"
+pages_build_output_dir = "./.output"
+compatibility_flags = ["nodejs_compat"]
+# node_compat = true  
+
+[vars]
+NODE_ENV = "production"
+VITE_SERVER_URL = ""
