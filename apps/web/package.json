@@ -44,6 +44,6 @@
     "typescript": "^5.7.2",
     "vite": "^6.3.5",
     "web-vitals": "^4.2.4",
-    "@tanstack/react-query-devtools": "^5.80.5"
+    "@tanstack/react-query-devtools": "^5.80.7"
   }
 }

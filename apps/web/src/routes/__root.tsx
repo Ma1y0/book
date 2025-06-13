@@ -1,5 +1,7 @@
 import { Toaster } from "~/components/ui/sonner";
 
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
 import {
   HeadContent,
   Outlet,
@@ -54,6 +56,7 @@ function RootDocument() {
         </div>
         <Toaster richColors />
         <TanStackRouterDevtools position="bottom-left" />
+        <ReactQueryDevtools position="bottom" buttonPosition="bottom-right" />
         <Scripts />
       </body>
     </html>
