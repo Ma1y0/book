@@ -2,6 +2,7 @@ import { createORPCClient } from "@orpc/client";
 import { RPCLink } from "@orpc/client/fetch";
 import type { appRouter } from "../../../api/src/routes/index";
 import type { RouterClient } from "@orpc/server";
+import { createTanstackQueryUtils } from "@orpc/tanstack-query";
 
 export const link = new RPCLink({
   url: `${import.meta.env.VITE_SERVER_URL}/rpc`,
@@ -14,3 +15,5 @@ export const link = new RPCLink({
 });
 
 export const orpc: RouterClient<typeof appRouter> = createORPCClient(link);
+
+export const orpcQuery = createTanstackQueryUtils(orpc);
