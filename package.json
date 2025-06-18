@@ -9,7 +9,10 @@
     "check-types": "turbo check-types",
     "dev:native": "turbo -F native dev",
     "dev:web": "turbo -F web dev",
-    "dev:api": "turbo -F api dev"
+    "dev:api": "turbo -F api dev",
+    "dev:web+api+studio": "turbo dev && turbo -F api db:studio",
+    "db:push": "turbo -F api db:push",
+    "db:studio": "turbo -F api db:studio"
   },
   "devDependencies": {
     "turbo": "^2.5.4",

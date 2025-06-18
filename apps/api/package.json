@@ -14,6 +14,7 @@
   "dependencies": {
     "@orpc/client": "^1.4.1",
     "@orpc/server": "^1.4.1",
+    "better-auth": "^1.2.9",
     "drizzle-orm": "^0.44.2",
     "hono": "^4.7.6",
     "zod": "^3.25.16"

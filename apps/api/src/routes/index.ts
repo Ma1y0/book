@@ -1,12 +1,11 @@
-import { db } from "~/db";
-import { publicProcedure } from "~/lib/orpc";
+import { publicProcedure, protectedProcedure } from "~/lib/orpc";
 
 export const appRouter = {
   healthCheck: publicProcedure.handler(() => {
     return "OK";
   }),
-  getToDos: publicProcedure.handler(() => {
-    return db.query.todo.findMany();
+  privateData: protectedProcedure.handler(({ context }) => {
+    return { message: "Secret Psss", user: context.session.user };
   }),
 };
 export type AppRouter = typeof appRouter;
