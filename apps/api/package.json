@@ -7,18 +7,22 @@
     "check-types": "tsc --noEmit",
     "compile": "bun build --compile --minify --sourcemap --bytecode ./src/index.ts --outfile server",
     "dev": "bun run --hot src/index.ts",
-    "deploy": "wrangler deploy",
-    "start": "bun run dist/src/index.js"
+    "start": "bun run dist/src/index.js",
+    "db:studio": "bun run drizzle-kit studio",
+    "db:push": "bun run drizzle-kit push"
   },
   "dependencies": {
-    "zod": "^3.25.16",
-    "@orpc/server": "^1.4.1",
     "@orpc/client": "^1.4.1",
-    "hono": "^4.7.6"
+    "@orpc/server": "^1.4.1",
+    "drizzle-orm": "^0.44.2",
+    "hono": "^4.7.6",
+    "zod": "^3.25.16"
   },
   "devDependencies": {
+    "@libsql/client": "^0.15.9",
+    "@types/bun": "^1.2.6",
+    "drizzle-kit": "^0.31.1",
     "tsc-alias": "^1.8.11",
-    "typescript": "^5.8.2",
-    "@types/bun": "^1.2.6"
+    "typescript": "^5.8.2"
   }
 }

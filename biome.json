@@ -41,6 +41,9 @@
             "functions": ["clsx", "cva", "cn"]
           }
         }
+      },
+      "style": {
+        "noNonNullAssertion": "off"
       }
     }
   },
