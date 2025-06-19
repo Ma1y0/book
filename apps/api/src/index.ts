@@ -1,10 +1,10 @@
 import { RPCHandler } from "@orpc/server/fetch";
 import { Hono } from "hono";
-import { logger } from "hono/logger";
-import { appRouter } from "./routes";
 import { cors } from "hono/cors";
-import { createContext } from "~/lib/context";
+import { logger } from "hono/logger";
 import { auth } from "~/lib/auth";
+import { createContext } from "~/lib/context";
+import { appRouter } from "./routes";
 
 const app = new Hono();
 app.use(logger());

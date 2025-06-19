@@ -10,11 +10,11 @@ import {
   useRouterState,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import Loader from "~/components/loader";
 import Header from "../components/header";
 import appCss from "../index.css?url";
-import Loader from "~/components/loader";
 
-export interface RouterAppContext {}
+export type RouterAppContext = {};
 
 export const Route = createRootRouteWithContext<RouterAppContext>()({
   head: () => ({

@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
 import { orpcQuery } from "~/lib/orpc";
 
-export const Route = createFileRoute("/dev")({
+export const Route = createFileRoute("/dev/api")({
   component: RouteComponent,
 });
 

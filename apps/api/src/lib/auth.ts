@@ -5,9 +5,9 @@ import * as schema from "~/db/schema/auth";
 
 export const auth = betterAuth({
   emailAndPassword: {
+    minPasswordLength: 4,
     enabled: true,
   },
-
   database: drizzleAdapter(db, {
     provider: "sqlite",
     schema: schema,
